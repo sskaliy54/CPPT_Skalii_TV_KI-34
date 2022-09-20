@@ -1,0 +1,16 @@
+Put on
+Your shoes are 98% clean
+Hash lacing
+The lacing type changed to: Twistie
+Twistie lacing
+Take off
+Put on
+Your shoes are 96% clean
+Your shoes on 98% unharmed
+Shoe size is:38
+Your shoes have been repaired!
+Your shoes on 100% unharmed
+Youre shoes are made of-Leather
+Your shoes are now clean!
+Take off
+Your shoes are 100% clean
