@@ -1,0 +1,42 @@
+/**
+ * lab 3 package
+ */
+package KI34.Skalii.Lab3;
+
+import java.io.*;
+
+/**
+ * Shoes Application class implements main method for Shoes class possibilities demonstration
+ * @author Tetiana Skalii
+ * @version 1.0
+ */
+public class ShoesApp {
+    /**
+    * @param args 
+    * @throws FileNotFoundException
+    */
+    public static void main(String[] args) throws FileNotFoundException {
+        try{
+            Shoes AirForce = new Shoes(38, "Leather");
+            AirForce.Start();
+            AirForce.showClean();
+            AirForce.showLacing();
+            AirForce.changeLacing(2);
+            AirForce.showLacing();
+            AirForce.End();
+            AirForce.Start();
+            AirForce.showClean();
+            AirForce.showRepair();
+            AirForce.showSize();
+            AirForce.repair();
+            AirForce.showRepair();
+            AirForce.showMaterial();
+            AirForce.clean();
+            AirForce.End();
+            AirForce.showClean();
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
