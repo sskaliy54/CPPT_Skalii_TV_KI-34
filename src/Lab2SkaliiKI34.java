@@ -77,8 +77,10 @@ public class Lab2SkaliiKI34 {
         }while(check);
 
         for(int i = 0; i<nRows; i++){
+        	int k=0;
             for(int j =0;j< arr[i].length/2;j++){
                 arr[i][j] = (char) filler.codePointAt(0);
+                k++;
                 System.out.print(arr[i][j] + " ");
                 fOut.print(arr[i][j] + " ");
                 bridge = j;
@@ -89,9 +91,15 @@ public class Lab2SkaliiKI34 {
             }
             for(int j = bridge+1;j<arr[i].length;j++){
                 arr[i][j] = (char) filler.codePointAt(0);
+                k++;
                 System.out.print(arr[i][j] + " ");
                 fOut.print(arr[i][j] + " ");
             }
+            if(i==1 || i==nRows-1 ) {
+            	 System.out.print(k);
+                 fOut.print(k);
+            }
+            k=0;
             if(i==(nRows/2)-1){
                 System.out.println();
                 fOut.println();
