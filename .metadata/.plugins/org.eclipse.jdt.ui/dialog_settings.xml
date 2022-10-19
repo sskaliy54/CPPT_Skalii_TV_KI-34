@@ -34,7 +34,7 @@
 		<item key="fromStandard" value="true"/>
 		<item key="docletname" value=""/>
 		<item key="docletpath" value=""/>
-		<item key="access" value="public"/>
+		<item key="access" value="package"/>
 		<item key="use" value="true"/>
 		<item key="author" value="true"/>
 		<item key="version" value="true"/>
@@ -45,28 +45,51 @@
 		<item key="notree" value="false"/>
 		<item key="nonavbar" value="false"/>
 		<item key="openinbrowser" value="false"/>
-		<item key="source" value="18"/>
-		<item key="antpath" value="C:\Users\sskal\Desktop\repos\Lab2SkaliiKI34\javadoc.xml"/>
-		<item key="destdir" value="C:\Users\sskal\Desktop\repos\Lab2SkaliiKI34\doc"/>
+		<item key="source" value="1.8"/>
+		<item key="antpath" value="C:\Users\sskal\Desktop\repos\Lab4SkaliiKI34\javadoc.xml"/>
+		<item key="destdir" value="C:\Users\sskal\Desktop\repos\Lab4SkaliiKI34\doc"/>
 		<section name="projects">
+			<section name="Lab6SkaliiKI34">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\sskal\Desktop\repos\Lab6SkaliiKI34\doc"/>
+				<item key="antpath" value="C:\Users\sskal\Desktop\repos\Lab6SkaliiKI34\javadoc.xml"/>
+			</section>
 			<section name="Lab2SkaliiKI34">
 				<item key="href" value=""/>
 				<item key="destdir" value="C:\Users\sskal\Desktop\repos\Lab2SkaliiKI34\doc"/>
 				<item key="antpath" value="C:\Users\sskal\Desktop\repos\Lab2SkaliiKI34\javadoc.xml"/>
+			</section>
+			<section name="Lab5SkaliiKI34">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\sskal\Desktop\repos\Lab5SkaliiKI34\doc"/>
+				<item key="antpath" value="C:\Users\sskal\Desktop\repos\Lab5SkaliiKI34\javadoc.xml"/>
 			</section>
 			<section name="LAB_01">
 				<item key="href" value=""/>
 				<item key="destdir" value="C:\Users\sskal\Desktop\repos\LAB_01\doc"/>
 				<item key="antpath" value="C:\Users\sskal\Desktop\repos\LAB_01\javadoc.xml"/>
 			</section>
-			<section name="prob">
+			<section name="Lab4SkaliiKI34">
 				<item key="href" value=""/>
-				<item key="destdir" value="C:\Users\sskal\Desktop\KZP\doc"/>
-				<item key="antpath" value="C:\Users\sskal\Desktop\KZP\javadoc.xml"/>
+				<item key="destdir" value="C:\Users\sskal\Desktop\repos\Lab4SkaliiKI34\doc"/>
+				<item key="antpath" value="C:\Users\sskal\Desktop\repos\Lab4SkaliiKI34\javadoc.xml"/>
+			</section>
+			<section name="Lab7SkaliiKI34">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\sskal\Desktop\repos\Lab7SkaliiKI34\doc"/>
+				<item key="antpath" value="C:\Users\sskal\Desktop\repos\Lab7SkaliiKI34\javadoc.xml"/>
+			</section>
+			<section name="Lab3SkaliiKI34">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\sskal\Desktop\repos\Lab3SkaliiKI34\doc"/>
+				<item key="antpath" value="C:\Users\sskal\Desktop\repos\Lab3SkaliiKI34\javadoc.xml"/>
 			</section>
 		</section>
 	</section>
 	<section name="BuildPathsPropertyPage">
 		<item key="pageIndex" value="3"/>
+	</section>
+	<section name="NewPackageWizardPage">
+		<item key="create_package_info_java" value="false"/>
 	</section>
 </section>

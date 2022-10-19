@@ -8,7 +8,6 @@ import java.io.*;
  * @author Tetiana Skalii
  * @version 1.0
  */
-
 public class Shoes {
     boolean isPutOn = false;
     int size = 0;
@@ -18,18 +17,22 @@ public class Shoes {
     Wash washed = new Wash();
     Repair repaired = new Repair();
     private PrintWriter fout;
+    String name;
+    public static int count;
     /**
      * Constructor
      * Creates shoes pair
      */
-    public Shoes(int s, String m)throws FileNotFoundException{
+    public Shoes(String n,int s, String m)throws FileNotFoundException{
         lacing = "Hash";
         size = s;
+        name = n;
         material = m;
         fout = new PrintWriter( new File("KI34.Skalii.Lab3.txt"));
+        if (s>37)
+        	count++;
+        /*sizeGreaterThan();*/
     }
-
-
     /**
      * Method for put on shoes
      */
@@ -71,6 +74,19 @@ public class Shoes {
         fout.println(lacing+" lacing");
     }
     /**
+     * Method shows lacing type
+     */
+    /*public void shownam(){
+    	if(name.contains("k")) {
+        System.out.printf("Name: %s ;  Size: %d ; Material: %s ;\n",name,size,material);
+        fout.printf("Name: %s ;  Size: %d ; Material: %s ;\n",name,size,material);
+    	}
+    	else 
+    		System.out.println("There are no shoes with the selected letter in their name");
+    		
+    }/*
+    
+    /**
      * Method shows material type
      */
     public void showMaterial(){
@@ -93,6 +109,21 @@ public class Shoes {
         System.out.println("Shoe size is:"+size);
         fout.println("Shoe size is:"+size);
     }
+    /**
+     * Method shows info
+     */
+    public void showInfo(){
+    	System.out.printf("Name: %s ;  Size: %d ; Material: %s ;\n", name, size, material);
+        fout.printf("Name: %s  Size: %d  Material: %s \n", name, size, material);
+    }
+    
+    /*public void sizeGreaterThan(){
+    	if(size>37) {
+            System.out.printf("Name: %s ;  Size: %d ; Material: %s ;\n", name, size, material);
+            fout.printf("Name: %s  Size: %d  Material: %s \n", name, size, material);
+    	}
+
+    }*/
 
     /**
      * Method shows if cleaning needed

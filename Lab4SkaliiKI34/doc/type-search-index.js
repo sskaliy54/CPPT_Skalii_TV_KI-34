@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"KI34.Skalii.Lab4","l":"Boots"},{"p":"KI34.Skalii.Lab4","l":"IBoots"},{"p":"KI34.Skalii.Lab4","l":"Repair"},{"p":"KI34.Skalii.Lab4","l":"Shoes"},{"p":"KI34.Skalii.Lab4","l":"ShoesApp"},{"p":"KI34.Skalii.Lab4","l":"Wash"}];updateSearchResults();
