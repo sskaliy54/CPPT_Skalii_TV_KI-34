@@ -51,7 +51,7 @@ class CalcWFio
         }
         catch (FileNotFoundException ex)
         {
-            System.out.print(ex.getMessage());
+        	System.out.print(ex.getMessage());
         }
     }
     /**
@@ -59,23 +59,55 @@ class CalcWFio
      * @param fName File's name
      * @throws IOException error
      */
-    public void writeResBin(String fName) throws FileNotFoundException, IOException
+    public void writeResBin(String fName) //throws FileNotFoundException, IOException
     {
-        DataOutputStream f = new DataOutputStream(new FileOutputStream(fName));
-        f.writeDouble(result);
-        f.close();
+    	try ( DataOutputStream f = new DataOutputStream(new FileOutputStream(fName)) ) {
+       f.writeDouble(result);
+       f.close();
+    	}
+
+    	catch (IOException e) {
+    		System.out.println("Cannot Open the Output File");
+    		return;
+    	}
+
+        //DataOutputStream f = new DataOutputStream(new FileOutputStream(fName));
+        //f.writeDouble(result);
+        //f.close();
     }
+
     /**
      * Method reads bin file
      * @param fName File's name
      * @throws IOException error
      */
-    public void readResBin(String fName) throws FileNotFoundException, IOException
+    public void readResBin(String fName) //throws FileNotFoundException, IOException
     {
-        DataInputStream f = new DataInputStream(new FileInputStream(fName));
-        result = f.readDouble();
-        f.close();
+        try(DataInputStream f = new DataInputStream(new FileInputStream(fName))){
+        	result = f.readDouble();
+            f.close();
+        } 
+        catch (IOException e) {
+        	PrintWriter writer=null;
+        	try {
+				 writer = new PrintWriter("textRes.txt");
+			} catch (FileNotFoundException e1) {
+				e1.printStackTrace();
+			}
+        	writer.println("BinFileNotFound\n" +result);
+        	writer.flush();
+            writer.close();
+
+    		//System.out.println("Cannot Open the Input File");
+        }
+       // result = f.readDouble();
+        //f.close();
     }
+ 
+
+    
+   
+    
 
     public void calculate(double x)
     {

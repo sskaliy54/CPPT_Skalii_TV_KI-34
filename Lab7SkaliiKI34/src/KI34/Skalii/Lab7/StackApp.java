@@ -1,6 +1,7 @@
 package KI34.Skalii.Lab7;
 /**
- * Class App
+ * Class StackApp implements main method for Stack
+ * class possibilities demonstration 
  * @author Tetiana Skalii
  * @version 1.0
  */
@@ -8,25 +9,25 @@ public class StackApp {
 	   /**
 	     * @param args
 	     */
-	    public static void main(String[] args) throws Exception
+			 
+	    // main driver method
+	    public static void main(String[] args)
 	    {
-	        Stack<? super Task> stack = new Stack<Task>();
-
-	        stack.add(new Multiplication(2,10));
-	        stack.add(new Sum(1,2));
-	     	System.out.print("Stack Size: ");
-	        System.out.println(stack.getSize());
-	        stack.get().execute();
 	 
-	        Task minimal= stack.getTaskWithMinimalResult();
-	        minimal.execute();
-	        stack.add(new Multiplication(7,5));
-	        stack.add(new Multiplication(17,52));
-	        stack.add(new Multiplication(74,25));
-	        stack.executeAll();
-	        System.out.print("Stack Size: ");
-	        System.out.println(stack.getSize());
-	    }
+	        Stack <? super Data> Stack1 = new Stack <Data>(10);
+	        Stack1.Push(new text("Tania",5));
+	        Stack1.Push(new Variable("Integer",8));
+	        Stack1.Push(new Variable("Char",1));
+	        Stack1.Push(new text("Vitalii",7));
+	        Stack1.Push(new Variable("Float",4));
+            System.out.print("___________________________________ \n");
+	        Stack1.getMin();
+	        Stack1.Pop();
+	        System.out.print("************************************ \n");
+	        System.out.println("Stack after delete element ");
+	        System.out.print("************************************ \n");
+	        Stack1.Print();
 
+	  	    }
+	}
 
-}

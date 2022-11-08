@@ -23,11 +23,14 @@ public class FioApp{
 		}
         System.out.println("Result is: " + obj.getResult());
         obj.writeResTxt("textRes.txt");
-        obj.writeResBin("BinRes.bin");
-
-        obj.readResBin("BinRes.bin");
-        System.out.println("Result is: " + obj.getResult());
+        //obj.writeResBin("BinRes.bin");
+        
         obj.readResTxt("textRes.txt");
         System.out.println("Result is: " + obj.getResult());
+        obj.readResBin("BinRes.bin");
+        System.out.println("Result is: " + obj.getResult());
+       
+        
     }
+    
 }

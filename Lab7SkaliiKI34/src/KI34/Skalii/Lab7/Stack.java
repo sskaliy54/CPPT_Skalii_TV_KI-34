@@ -1,86 +1,135 @@
 package KI34.Skalii.Lab7;
 import java.util.ArrayList;
 /**
+ * Class Stack implements Stack
  * @author Tetiana Skalii
- * Class Stack
  * @version 1.0
  */
-public class Stack <T extends Task> {
-    private final int MAX_CAPACITY = 10;
-    private ArrayList<T> storage;
-public Stack()
+class Stack<T extends Data>
 {
-	storage= new ArrayList<>();
-}
+ 
+	private ArrayList<T> arr;
+    private int top;
+    private int capacity;
+    int minEle;
+
     /**
-     * Method returns last task
+     * Constructor
      */
-    public T get() throws Exception
+
+   public Stack(int size)
     {
-
-        if(storage.size() == 0)
-        {
-            throw new Exception("Stack is empty!");
-        }
-
-        int lastIndex = storage.size() - 1;
-
-        T task = storage.get(lastIndex);
-
-        storage.remove(lastIndex);
-
-        return task;
+        arr = new ArrayList<T>(size);
+        capacity = size;
+        top = 0;
     }
-    /**
-     * Method adds a task
-     */
-    public void add(T task)
-    {
+   /**
+    * Method simulates finding the MinElement in Stack
+    */
 
-        if(storage.size() >= MAX_CAPACITY)
+   void getMin() 
+   { 
+       // Get the minimum number in the entire stack 
+       if (arr.isEmpty()) 
+           System.out.println("Stack is empty"); 
+
+       // variable minEle stores the minimum element in the stack. 
+           else
+           System.out.println("Minimum Element in the stack is: " + minEle); 
+   } 
+   /**
+    * Method simulates push data
+    */
+
+    public void Push(T Data)
+    {
+        if (IsFull())
         {
-            throw new StackOverflowError();
+            System.out.println("Stack is FULL!!! \n");
+            System.exit(-1);
         }
 
-        storage.add(task);
+        int x =Data.getsize();
+        if(x<minEle)
+        	minEle =x;
+        if(top==0)
+        	minEle=x;
+        arr.add(Data);
+        ++top;
+        Data.print();
     }
-    /**
-     * Method executes all tasks in the stack
-     */
-    public void executeAll() throws Exception
+  
+   /* public T Pop()
     {
-        for(int i = storage.size(); i != 0; i--)
+        if (IsEmpty())
         {
-           get().execute();
+            System.out.println("Underflow\nProgram Terminated");
+            System.exit(-1);
         }
-    }
-    /**
-     * Method returns stack size
-     */
-    public int getSize()
-    {
-        return storage.size();
-    }
-    /**
-     * Method returns task with minimal result
-     */
-    public T getTaskWithMinimalResult() throws Exception
-    {
-       
-        if(storage.size() == 0)
-        {
-            throw new Exception("Stack is empty!");
-        }
-        int minResult = storage.get(0).execute();
-        for(int i = 0; i < storage.size(); i++)
-        {
-            int result = storage.get(i).execute();
 
-           if (minResult>result) {
-        	   minResult=result;
-           }
+        System.out.println("Removing " + Peek(null));
+        return arr.get(top--);
+    }*/
+    /**
+     * Method simulates deleting data
+     */
+    public T Pop() {
+
+        // if stack is empty no element to pop
+        if (IsEmpty()) {
+          System.out.println("STACK EMPTY!");
+          // terminates the program
+          System.exit(1);
         }
-         return storage.get(minResult);
+        T t = arr.get(--top); 
+        if (t.getsize() < minEle) 
+        { 
+            System.out.println(minEle); 
+            minEle = minEle - t.getsize(); 
+        } 
+        // pop element from top of stack
+        System.out.println("Removing " + Peek().getTextName());
+              return t;
+      }
+
+ 	public T Peek()
+    {
+        if (!IsEmpty()) {
+        	T t = arr.get(top);
+        	 if (t.getsize() < minEle) 
+                 System.out.println(minEle); 
+                     	 return t;
+        }
+        else {
+            System.exit(-1);
+        }
+        return null;
+    }
+
+
+    public int GetSize() {
+        return top + 1;
+    }
+
+    public boolean IsEmpty() {
+        return top == -1;
+    }
+    public boolean IsFull() {
+        return top == capacity - 1;
+    }
+    public void Print() {
+    for (int i =0 ; i<top; i++) {
+    	arr.get(i).print();
+    	}
+    }
+    public String toString()
+    {
+        String Ans = "";
+        for (int i = 0; i < top; i++) {
+            Ans += String.valueOf(arr.get(i)) ;
+        }
+        Ans += String.valueOf(arr.get(top));
+        return Ans;
     }
 }
 

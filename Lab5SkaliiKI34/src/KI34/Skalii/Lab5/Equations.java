@@ -20,7 +20,6 @@ class Equations
         {
             if (x==90 || x== -90 || x==-180 || x==180 || 2*x == 90 || 2*x == -90 || 2*x == 180 || 2*x == -180 )
                 throw new CalcException("Exception reason: Illegal value of X for tangent calculation");
-
             else if (x==0)
                 throw new CalcException("Exception reason: X = 0");
             else
@@ -31,4 +30,3 @@ class Equations
     }
 
 }
-

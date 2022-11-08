@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"KI34.Skalii.Lab7","l":"Data"},{"p":"KI34.Skalii.Lab7","l":"Stack"},{"p":"KI34.Skalii.Lab7","l":"StackApp"},{"p":"KI34.Skalii.Lab7","l":"text"},{"p":"KI34.Skalii.Lab7","l":"Variable"}];updateSearchResults();
