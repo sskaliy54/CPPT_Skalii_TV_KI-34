@@ -12,7 +12,6 @@ class Stack<T extends Data>
     private int top;
     private int capacity;
     int minEle;
-
     /**
      * Constructor
      */
@@ -22,6 +21,7 @@ class Stack<T extends Data>
         arr = new ArrayList<T>(size);
         capacity = size;
         top = 0;
+   
     }
    /**
     * Method simulates finding the MinElement in Stack
@@ -37,7 +37,7 @@ class Stack<T extends Data>
            else
            System.out.println("Minimum Element in the stack is: " + minEle); 
    } 
-   /**
+    /**
     * Method simulates push data
     */
 
@@ -49,13 +49,21 @@ class Stack<T extends Data>
             System.exit(-1);
         }
 
-        int x =Data.getsize();
+      /*  int x =Data.getsize();
         if(x<minEle)
         	minEle =x;
         if(top==0)
-        	minEle=x;
+        	minEle=x;*/
+        
         arr.add(Data);
         ++top;
+        minEle= arr.get(0).getsize();
+        
+        for(int i=0 ; i<top;i++) {
+         	if (arr.get(i).getsize()<minEle) {
+         		 minEle= arr.get(i).getsize();
+         	}
+         }
         Data.print();
     }
   
@@ -81,13 +89,26 @@ class Stack<T extends Data>
           // terminates the program
           System.exit(1);
         }
-        T t = arr.get(--top); 
-        if (t.getsize() < minEle) 
+        
+        T t = arr.get(--top);
+        //arr.remove(top);
+        minEle= arr.get(0).getsize();
+
+       for(int i=0 ; i< top;i++) {
+        	if (arr.get(i).getsize() < minEle) {
+        		 minEle= arr.get(i).getsize();
+        	}
+        }
+
+      //System.out.println(minEle);
+      /*  if (t.getsize() < minEle) 
         { 
+            minEle = t.getsize();
             System.out.println(minEle); 
-            minEle = minEle - t.getsize(); 
-        } 
-        // pop element from top of stack
+           // minEle = t.getsize();
+           
+        } */
+                // pop element from top of stack
         System.out.println("Removing " + Peek().getTextName());
               return t;
       }
@@ -97,8 +118,8 @@ class Stack<T extends Data>
         if (!IsEmpty()) {
         	T t = arr.get(top);
         	 if (t.getsize() < minEle) 
-                 System.out.println(minEle); 
-                     	 return t;
+        		 
+                   return t;
         }
         else {
             System.exit(-1);
@@ -108,8 +129,9 @@ class Stack<T extends Data>
 
 
     public int GetSize() {
-        return top + 1;
+        return top ;
     }
+
 
     public boolean IsEmpty() {
         return top == -1;

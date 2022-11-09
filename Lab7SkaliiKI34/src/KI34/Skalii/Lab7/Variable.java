@@ -9,7 +9,7 @@ public  class Variable implements Data
 {
     private String varName;
     private int size;
-
+    public static int count;
     /**
      * Constructor
      * @param vName Name of variable
@@ -19,6 +19,7 @@ public  class Variable implements Data
     {
        varName = vName;
        size = vsize;
+       count++;
     }
 
     /**
