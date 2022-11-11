@@ -109,7 +109,7 @@ class Stack<T extends Data>
            
         } */
                 // pop element from top of stack
-        System.out.println("Removing " + Peek().getTextName());
+        System.out.println("Removing " + arr.get(top).getTextName());
               return t;
       }
 
@@ -119,7 +119,7 @@ class Stack<T extends Data>
         	T t = arr.get(top);
         	 if (t.getsize() < minEle) 
         		 
-                   return t;
+                   return arr.get(top);
         }
         else {
             System.exit(-1);
@@ -134,7 +134,7 @@ class Stack<T extends Data>
 
 
     public boolean IsEmpty() {
-        return top == -1;
+        return top == 0;
     }
     public boolean IsFull() {
         return top == capacity - 1;

@@ -8,7 +8,7 @@ public  class text implements Data
 {
     private String textName;
     private int size;
-
+    public static int count;
     /**
      * Constructor
      * @param tName Name of text

@@ -19,6 +19,7 @@ public  class Variable implements Data
     {
        varName = vName;
        size = vsize;
+       if(varName.contains("Integer"))
        count++;
     }
 
